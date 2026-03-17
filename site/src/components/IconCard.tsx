@@ -3,12 +3,23 @@ import { motion, AnimatePresence } from "framer-motion";
 import type { IconEntry } from "../data/icons";
 import { copyToClipboard } from "../lib/clipboard";
 import { svgToJsx } from "../lib/svg-to-jsx";
+import { useLanguage } from "../context/LanguageContext";
+import { t } from "../data/ui-strings";
 
 interface IconCardProps {
   icon: IconEntry;
 }
 
+function formatAvvCode(code: string): string {
+  if (code.length === 6) return `${code.slice(0, 2)} ${code.slice(2, 4)} ${code.slice(4)}`;
+  if (code.length === 4) return `${code.slice(0, 2)} ${code.slice(2)}`;
+  return code;
+}
+
+const MAX_BADGES = 3;
+
 export default function IconCard({ icon }: IconCardProps) {
+  const { language } = useLanguage();
   const [copied, setCopied] = useState<"svg" | "jsx" | null>(null);
 
   const handleCopy = useCallback(
@@ -23,6 +34,10 @@ export default function IconCard({ icon }: IconCardProps) {
     },
     [icon.svg],
   );
+
+  const displayName = language === "de" ? icon.nameDe : icon.name;
+  const visibleCodes = icon.avvCodes.slice(0, MAX_BADGES);
+  const extraCount = icon.avvCodes.length - MAX_BADGES;
 
   return (
     <div className="group relative flex flex-col items-center">
@@ -70,15 +85,32 @@ export default function IconCard({ icon }: IconCardProps) {
                 dangerouslySetInnerHTML={{ __html: icon.svg }}
               />
               <span className="text-xs font-semibold text-rust-500">
-                Copied!
+                {t("copied", language)}
               </span>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
       <span className="mt-2 text-[11px] text-slate-500 truncate w-full text-center leading-tight">
-        {icon.name}
+        {displayName}
       </span>
+      {visibleCodes.length > 0 && (
+        <div className="mt-0.5 flex items-center gap-0.5 flex-wrap justify-center">
+          {visibleCodes.map((code) => (
+            <span
+              key={code}
+              className="text-[9px] font-mono text-slate-400 bg-slate-50 rounded px-1 py-px leading-tight"
+            >
+              AVV {formatAvvCode(code)}
+            </span>
+          ))}
+          {extraCount > 0 && (
+            <span className="text-[9px] text-slate-400">
+              +{extraCount}
+            </span>
+          )}
+        </div>
+      )}
     </div>
   );
 }

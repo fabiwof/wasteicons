@@ -22,3 +22,11 @@
   --color-rust-900: #602a1b;
   --color-rust-950: #34120b;
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

@@ -1,4 +1,6 @@
 import { useEffect, useRef } from "react";
+import { useLanguage } from "../context/LanguageContext";
+import { t } from "../data/ui-strings";
 
 interface SearchBarProps {
   value: string;
@@ -6,6 +8,7 @@ interface SearchBarProps {
 }
 
 export default function SearchBar({ value, onChange }: SearchBarProps) {
+  const { language } = useLanguage();
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -43,7 +46,7 @@ export default function SearchBar({ value, onChange }: SearchBarProps) {
         <input
           ref={inputRef}
           type="text"
-          placeholder="Alle Icons durchsuchen…"
+          placeholder={t("searchPlaceholder", language)}
           value={value}
           onChange={(e) => onChange(e.target.value)}
           className="w-full bg-transparent py-1 pl-8 pr-8 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none"

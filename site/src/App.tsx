@@ -1,28 +1,48 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import HeroSection from "./components/HeroSection";
 import SearchBar from "./components/SearchBar";
 import CategoryTabs, { type Category } from "./components/CategoryTabs";
 import IconGrid from "./components/IconGrid";
 import { allIcons } from "./data/icons";
+import { initSearch, search } from "./lib/search";
+import { useLanguage } from "./context/LanguageContext";
+import { t } from "./data/ui-strings";
 
 export default function App() {
+  const { language } = useLanguage();
   const [searchQuery, setSearchQuery] = useState("");
   const [category, setCategory] = useState<Category>("all");
+  useEffect(() => {
+    initSearch(allIcons);
+  }, []);
 
   const filteredIcons = useMemo(() => {
-    const q = searchQuery.toLowerCase().trim();
-    return allIcons.filter((icon) => {
-      if (category !== "all" && icon.category !== category) return false;
-      if (q && !icon.searchTerms.includes(q)) return false;
-      return true;
-    });
+    const q = searchQuery.trim();
+    let icons = allIcons;
+
+    if (q) {
+      const matchIds = search(q);
+      icons = icons.filter((icon) =>
+        matchIds.has(`${icon.category}-${icon.slug}`),
+      );
+    }
+
+    if (category !== "all") {
+      icons = icons.filter((icon) => icon.category === category);
+    }
+
+    return icons;
   }, [searchQuery, category]);
 
   const counts = useMemo(() => {
-    const q = searchQuery.toLowerCase().trim();
-    const matching = q
-      ? allIcons.filter((icon) => icon.searchTerms.includes(q))
-      : allIcons;
+    const q = searchQuery.trim();
+    let matching = allIcons;
+    if (q) {
+      const matchIds = search(q);
+      matching = allIcons.filter((icon) =>
+        matchIds.has(`${icon.category}-${icon.slug}`),
+      );
+    }
     return {
       all: matching.length,
       waste: matching.filter((i) => i.category === "waste").length,
@@ -54,7 +74,7 @@ export default function App() {
           href="https://schaffsch.de"
           className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-slate-600 transition-colors"
         >
-          Gebaut von
+          {t("builtBy", language)}
           <img src="/schaffsch.svg" alt="SCHAFFSCH" className="h-3.5 opacity-40 hover:opacity-70 transition-opacity" />
         </a>
       </footer>

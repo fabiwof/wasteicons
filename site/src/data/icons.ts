@@ -1,9 +1,14 @@
+import { iconMeta } from "./icon-meta";
+
 export interface IconEntry {
   slug: string;
   name: string;
+  nameDe: string;
   category: "waste" | "container";
   svg: string;
   componentName: string;
+  avvCodes: string[];
+  chapter: string;
   searchTerms: string;
 }
 
@@ -42,20 +47,35 @@ function parseModules(
     const slug = filename;
     const name = slugToName(slug);
     const componentName = toPascalCase(slug);
+    const meta = iconMeta[slug];
+    const nameDe = meta?.de ?? name;
+    const avvCodes = meta?.avvCodes ?? [];
+    const chapter = avvCodes[0]?.slice(0, 2) ?? "";
     return {
       slug,
       name,
+      nameDe,
       category,
       svg,
       componentName,
+      avvCodes,
+      chapter,
       searchTerms: `${slug} ${name} ${componentName}`.toLowerCase(),
     };
   });
 }
 
-const wasteIcons = parseModules(wasteModules, "waste").sort((a, b) =>
-  a.slug.localeCompare(b.slug),
-);
+const wasteIcons = parseModules(wasteModules, "waste").sort((a, b) => {
+  const codeA = a.avvCodes[0] ?? "";
+  const codeB = b.avvCodes[0] ?? "";
+  if (!codeA && !codeB) return a.slug.localeCompare(b.slug);
+  if (!codeA) return 1;
+  if (!codeB) return -1;
+  // Sort by chapter first, then by full code length (2→4→6), then by code value
+  if (a.chapter !== b.chapter) return a.chapter.localeCompare(b.chapter);
+  if (codeA.length !== codeB.length) return codeA.length - codeB.length;
+  return codeA.localeCompare(codeB);
+});
 const containerIcons = parseModules(containerModules, "container").sort(
   (a, b) => a.slug.localeCompare(b.slug),
 );

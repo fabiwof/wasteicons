@@ -1,6 +1,6 @@
 {
   "name": "@schaffsch/waste-icons",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Waste type and container SVG icons based on the European Waste Catalogue (AVV/EWC)",
   "license": "MIT",
   "type": "module",
@@ -42,7 +42,7 @@
     "build:react": "node scripts/build-react.mjs",
     "build:package": "tsup",
     "build": "npm run extract && npm run optimize && npm run build:react && npm run build:package",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build:package"
   },
   "dependencies": {
     "svgo": "^3.2.0"

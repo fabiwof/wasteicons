@@ -1,3 +1,6 @@
+import { useLanguage } from "../context/LanguageContext";
+import { t } from "../data/ui-strings";
+
 export type Category = "all" | "waste" | "container";
 
 interface CategoryTabsProps {
@@ -6,10 +9,10 @@ interface CategoryTabsProps {
   counts: { all: number; waste: number; container: number };
 }
 
-const tabs: { key: Category; label: string; detail: string }[] = [
-  { key: "all", label: "Alle", detail: "" },
-  { key: "waste", label: "Abfall", detail: "24×24, 1.5px stroke" },
-  { key: "container", label: "Behälter", detail: "40×28, 1.5px stroke" },
+const tabs: { key: Category; labelKey: "categoryAll" | "categoryWaste" | "categoryContainer"; detail: string }[] = [
+  { key: "all", labelKey: "categoryAll", detail: "" },
+  { key: "waste", labelKey: "categoryWaste", detail: "24\u00d724, 1.5px stroke" },
+  { key: "container", labelKey: "categoryContainer", detail: "40\u00d728, 1.5px stroke" },
 ];
 
 export default function CategoryTabs({
@@ -17,12 +20,13 @@ export default function CategoryTabs({
   onChange,
   counts,
 }: CategoryTabsProps) {
+  const { language } = useLanguage();
   const activeTab = tabs.find((t) => t.key === active);
 
   return (
     <div className="flex items-center justify-between py-4">
       <div className="flex gap-3">
-        {tabs.map(({ key, label }) => (
+        {tabs.map(({ key, labelKey }) => (
           <button
             key={key}
             onClick={() => onChange(key)}
@@ -32,19 +36,19 @@ export default function CategoryTabs({
                 : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
             }`}
           >
-            {label}
+            {t(labelKey, language)}
           </button>
         ))}
       </div>
       <div className="hidden sm:flex items-center gap-2 text-sm text-slate-500">
         {activeTab && activeTab.key !== "all" && (
           <>
-            <span className="font-semibold text-slate-900">{activeTab.label}</span>
+            <span className="font-semibold text-slate-900">{t(activeTab.labelKey, language)}</span>
             <span>{activeTab.detail}</span>
           </>
         )}
         {activeTab && activeTab.key === "all" && (
-          <span>{counts.all} Icons</span>
+          <span>{counts.all} {t("nIcons", language)}</span>
         )}
       </div>
     </div>
