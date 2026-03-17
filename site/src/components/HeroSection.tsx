@@ -1,6 +1,7 @@
 import { allIcons } from "../data/icons";
 import { useLanguage } from "../context/LanguageContext";
 import { t } from "../data/ui-strings";
+import { version } from "../data/version";
 import LanguageToggle from "./LanguageToggle";
 
 export default function HeroSection() {
@@ -73,7 +74,7 @@ export default function HeroSection() {
             </svg>
             <span className="text-xl font-bold text-slate-900 tracking-tight">wasteicons</span>
             <span className="ml-1 rounded-full border border-slate-200 bg-white px-2.5 py-0.5 text-xs font-medium text-slate-500">
-              v0.1
+              v{version}
             </span>
           </div>
           <LanguageToggle />
