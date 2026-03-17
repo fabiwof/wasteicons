@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const ContaminatedSoilIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <path fill="currentColor" d="M2 20c2-4 5-10 9-10s5 4 5 10z" opacity=".25"/><rect width="4" height="1" x="5" y="16.5" fill="currentColor" opacity=".15" rx=".5"/><rect width="2" height="1" x="10" y="14.5" fill="currentColor" opacity=".15" rx=".5"/><g><path fill="currentColor" d="m19 10 2.5 4.5h-5z" opacity=".6"/><circle cx="19" cy="14" r=".5" fill="#fff"/><rect width=".8" height="1.5" x="18.6" y="11.8" fill="#fff" rx=".4"/></g>
+    </svg>
+  )
+);
+
+ContaminatedSoilIcon.displayName = "ContaminatedSoilIcon";
+
+export default ContaminatedSoilIcon;

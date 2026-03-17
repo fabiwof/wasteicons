@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+      <path d="M4 11l8-7 8 7v0H6z" fill="currentColor" opacity="0.2" />
+      <path d="M6 10v10h12V10H6z" fill="currentColor" opacity="0.25" />
+      <rect x="10" y="14" width="4" height="6" fill="currentColor" opacity="0.15" />
+      <path d="M14 4l4 4M18 4l-4 4" fill="none" />
+      <rect x="13.3" y="3.5" width="5.4" height="1.2" rx="0.6" fill="currentColor" transform="rotate(45 16 6)" />
+      <rect x="13.3" y="3.5" width="5.4" height="1.2" rx="0.6" fill="currentColor" transform="rotate(-45 16 6)" />
+      <rect x="8" y="12.5" width="3" height="1" rx="0.5" fill="currentColor" opacity="0.15" />
+      <rect x="13" y="12.5" width="3" height="1" rx="0.5" fill="currentColor" opacity="0.15" />
+    </svg>

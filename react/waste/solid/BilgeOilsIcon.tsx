@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const BilgeOilsIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <path fill="currentColor" d="m3 14 3-4h12l3 4q-3 3-9 3c-6 0-7-1-9-3"/><path fill="currentColor" d="M8 10V6h8v4z" opacity=".3"/><rect width="1" height="3" x="11.5" y="3" fill="currentColor" rx=".5"/><path fill="currentColor" d="M3 19q3-1.5 6 0c3 1.5 4 1 6 0s4-1 6 0v1q-3 1.5-6 0c-3-1.5-4-1-6 0s-4 1-6 0z" opacity=".2"/>
+    </svg>
+  )
+);
+
+BilgeOilsIcon.displayName = "BilgeOilsIcon";
+
+export default BilgeOilsIcon;

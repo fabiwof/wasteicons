@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const MiningIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <path fill="currentColor" d="m16 3-2 2 5 5 2-2z"/><path d="m14 5-9 9"/><path fill="currentColor" d="m13.3 4.3-9 9a1 1 0 0 0 0 1.4 1 1 0 0 0 1.4 0l9-9a1 1 0 0 0 0-1.4 1 1 0 0 0-1.4 0" opacity=".5"/><path fill="currentColor" d="M4 17c1-2 3-3 5-3l2 2c0 2-1 4-3 5z"/><path fill="currentColor" d="m14 15 3 1 2 3-1 1-3-2z" opacity=".2"/>
+    </svg>
+  )
+);
+
+MiningIcon.displayName = "MiningIcon";
+
+export default MiningIcon;

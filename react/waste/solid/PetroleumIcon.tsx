@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const PetroleumIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <path fill="currentColor" d="M12 2c-4 5.5-7 9-7 13a7 7 0 0 0 14 0c0-4-3-7.5-7-13"/><rect width="13.4" height="1" x="5.3" y="13.5" fill="#fff" opacity=".3" rx=".5"/><path d="M6 17.5Q8.25 19 12 19c3.75 0 4.5-.5 6-1.5"/><path fill="#fff" d="M6 17q2.25 1.5 6 1.5c3.75 0 4.5-.5 6-1.5v1q-2.25 1.5-6 1.5c-3.75 0-4.5-.5-6-1.5z" opacity=".15"/><path d="M10 11c0-1.5 1-2.5 2-4"/><path fill="#fff" d="M10 10.5a.5.5 0 0 1 .15-.35c.5-.75 1-1.5 1.5-2.8a.5.5 0 0 1 .95.3c-.5 1.3-1.1 2.2-1.6 3a.5.5 0 0 1-.5.25.5.5 0 0 1-.5-.4" opacity=".3"/>
+    </svg>
+  )
+);
+
+PetroleumIcon.displayName = "PetroleumIcon";
+
+export default PetroleumIcon;

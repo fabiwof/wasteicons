@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const SprayCoatingsIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <rect width="10" height="14" x="6" y="7" fill="currentColor" rx="1"/><path fill="currentColor" d="M9 5h4v2H9z"/><rect width="2" height="3" x="10" y="2" fill="currentColor" rx=".5"/><circle cx="11" cy="14" r="2.5" fill="#fff" opacity=".2"/><rect width="3" height="1.5" x="15" y="3" fill="currentColor" opacity=".3" rx=".5"/>
+    </svg>
+  )
+);
+
+SprayCoatingsIcon.displayName = "SprayCoatingsIcon";
+
+export default SprayCoatingsIcon;

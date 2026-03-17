@@ -1,0 +1,74 @@
+{
+  "name": "@schaffsch/waste-icons",
+  "version": "0.1.0",
+  "description": "Waste type and container SVG icons based on the European Waste Catalogue (AVV/EWC)",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/react/index.js",
+  "module": "./dist/react/index.js",
+  "types": "./dist/react/index.d.ts",
+  "exports": {
+    "./react/waste/outline": {
+      "types": "./dist/react/waste/outline/index.d.ts",
+      "import": "./dist/react/waste/outline/index.js"
+    },
+    "./react/waste/solid": {
+      "types": "./dist/react/waste/solid/index.d.ts",
+      "import": "./dist/react/waste/solid/index.js"
+    },
+    "./react/container/outline": {
+      "types": "./dist/react/container/outline/index.d.ts",
+      "import": "./dist/react/container/outline/index.js"
+    },
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "import": "./dist/react/index.js"
+    },
+    "./react/WasteIcon": {
+      "types": "./dist/react/WasteIcon.d.ts",
+      "import": "./dist/react/WasteIcon.js"
+    }
+  },
+  "files": [
+    "dist",
+    "optimized",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "extract": "node scripts/extract-svgs.mjs",
+    "optimize": "node scripts/optimize.mjs",
+    "build:react": "node scripts/build-react.mjs",
+    "build:package": "tsup",
+    "build": "npm run extract && npm run optimize && npm run build:react && npm run build:package",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "svgo": "^3.2.0"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "keywords": [
+    "icons",
+    "svg",
+    "waste",
+    "avv",
+    "ewc",
+    "recycling",
+    "abfall",
+    "react",
+    "container"
+  ],
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const AsphaltTarIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <path fill="currentColor" d="M3 14h18v6H3z" opacity=".25"/><path fill="currentColor" d="M3 17h18v1H3z" opacity=".15"/><path fill="currentColor" d="m4 10 8-6 8 6v4H4z" opacity=".2"/><rect width="20" height="1.5" x="2" y="19.5" fill="currentColor" rx=".75"/><rect width="1" height="2" x="9.5" y="12" fill="currentColor" opacity=".15" rx=".5"/><rect width="1" height="2" x="13.5" y="12" fill="currentColor" opacity=".15" rx=".5"/>
+    </svg>
+  )
+);
+
+AsphaltTarIcon.displayName = "AsphaltTarIcon";
+
+export default AsphaltTarIcon;

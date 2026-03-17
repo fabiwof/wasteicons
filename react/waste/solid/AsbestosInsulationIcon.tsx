@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const AsbestosInsulationIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <rect width="13" height="13" x="3" y="7" fill="currentColor" opacity=".2" rx=".5"/><path fill="currentColor" d="M3 10.5h13v1H3z" opacity=".1"/><path fill="currentColor" d="M3 14.5h13v1H3z" opacity=".1"/><path fill="currentColor" d="M6.5 7h1v13h-1z" opacity=".1"/><path fill="currentColor" d="M10.5 7h1v13h-1z" opacity=".1"/><g><path fill="currentColor" d="m19 10 2.5 4.5h-5z" opacity=".6"/><circle cx="19" cy="14" r=".5" fill="#fff"/><rect width=".8" height="1.5" x="18.6" y="11.8" fill="#fff" rx=".4"/></g>
+    </svg>
+  )
+);
+
+AsbestosInsulationIcon.displayName = "AsbestosInsulationIcon";
+
+export default AsbestosInsulationIcon;

@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const PlasticPackagingIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <path fill="currentColor" d="M9 3h6v3l1 2v12a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V8l1-2z"/><rect width="6" height="1.5" x="9" y="2.5" fill="currentColor" rx=".5"/><path fill="#fff" d="M9 11.5h6v1H9z" opacity=".2"/>
+    </svg>
+  )
+);
+
+PlasticPackagingIcon.displayName = "PlasticPackagingIcon";
+
+export default PlasticPackagingIcon;

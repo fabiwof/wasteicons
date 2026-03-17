@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const WasteTreatmentIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <path fill="currentColor" d="M6 3h12v5l-4 4 4 4v5H6v-5l4-4-4-4z" opacity=".2"/><rect width="12" height="1.5" x="6" y="2.5" fill="currentColor" rx=".75"/><rect width="12" height="1.5" x="6" y="20" fill="currentColor" rx=".75"/><rect width="6" height="1" x="9" y="16.5" fill="currentColor" opacity=".15" rx=".5"/><rect width="4" height="1" x="10" y="6.5" fill="currentColor" opacity=".15" rx=".5"/>
+    </svg>
+  )
+);
+
+WasteTreatmentIcon.displayName = "WasteTreatmentIcon";
+
+export default WasteTreatmentIcon;

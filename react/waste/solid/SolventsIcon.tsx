@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const SolventsIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <path fill="currentColor" d="M10 3h4v5l5 10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1l5-10z"/><rect width="4" height="2" x="10" y="2" fill="currentColor" rx=".5"/><rect width="10" height="1" x="7" y="14.5" fill="#fff" opacity=".2" rx=".5"/><path fill="currentColor" d="M8 1.5c.5 1 0 2-.5 2.5" opacity=".2"/><path fill="currentColor" d="M16 1.5c.5 1 0 2-.5 2.5" opacity=".2"/><circle cx="8.5" cy="2.5" r=".8" fill="currentColor" opacity=".2"/><circle cx="16.5" cy="2.5" r=".8" fill="currentColor" opacity=".2"/>
+    </svg>
+  )
+);
+
+SolventsIcon.displayName = "SolventsIcon";
+
+export default SolventsIcon;

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 28" fill="none">
+      
+      <rect
+        x="3"
+        y="8"
+        width="31"
+        height="16"
+        rx="0.5"
+        stroke="currentColor"
+        stroke-width="1.5"
+      />
+      
+      <path
+        d="M3 12l-2-4"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      
+      <circle cx="32" cy="26" r="1.5" stroke="currentColor" stroke-width="1.2" />
+      
+      <path
+        d="M12 8v16M20 8v16M28 8v16"
+        stroke="currentColor"
+        stroke-width="0.75"
+        stroke-linecap="round"
+        opacity="0.25"
+      />
+    </svg>

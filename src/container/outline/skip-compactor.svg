@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 28" fill="none">
+      
+      <rect
+        x="2"
+        y="10"
+        width="14"
+        height="14"
+        rx="0.5"
+        stroke="currentColor"
+        stroke-width="1.5"
+      />
+      
+      <path
+        d="M5 10V7h8v3"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      
+      <path
+        d="M7 15l4 2-4 2"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      
+      <path
+        d="M16 10l-2-6h22l-2 6v8l-1 6H17l-1-6z"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linejoin="round"
+      />
+      
+      <path
+        d="M16 24l-2 3 2-1"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linejoin="round"
+      />
+    </svg>

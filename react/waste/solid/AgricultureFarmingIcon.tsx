@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const AgricultureFarmingIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <path fill="currentColor" d="m3 11 9-7 9 7" opacity=".3"/><path fill="currentColor" d="M5 10h14v10H5z"/><path fill="#fff" d="M10 14h4v6h-4z" opacity=".3"/><path fill="#fff" d="M5 14.5h14v1H5z" opacity=".15"/><rect width="1.5" height="3" x="11.25" y="4" fill="currentColor" opacity=".3" rx=".5"/>
+    </svg>
+  )
+);
+
+AgricultureFarmingIcon.displayName = "AgricultureFarmingIcon";
+
+export default AgricultureFarmingIcon;

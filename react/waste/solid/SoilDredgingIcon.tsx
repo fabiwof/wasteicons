@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const SoilDredgingIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <path fill="currentColor" d="M2 20c2-4 5-10 10-10s8 6 10 10z" opacity=".25"/><rect width="1.3" height="8.5" x="14" y="3" fill="currentColor" rx=".65" transform="rotate(25 17 7)"/><path fill="currentColor" d="m14 11-2-1 1-2z" opacity=".5"/><rect width="3" height="1" x="6" y="16.5" fill="currentColor" opacity=".15" rx=".5"/><rect width="2" height="1" x="11" y="14.5" fill="currentColor" opacity=".15" rx=".5"/>
+    </svg>
+  )
+);
+
+SoilDredgingIcon.displayName = "SoilDredgingIcon";
+
+export default SoilDredgingIcon;

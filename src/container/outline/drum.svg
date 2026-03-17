@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 28" fill="none">
+      
+      <rect
+        x="12"
+        y="2"
+        width="16"
+        height="24"
+        rx="1"
+        stroke="currentColor"
+        stroke-width="1.5"
+      />
+      
+      <path
+        d="M10 3h2M28 3h2"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+      
+      <path
+        d="M10 25h2M28 25h2"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+      
+      <path
+        d="M12 10h16M12 18h16"
+        stroke="currentColor"
+        stroke-width="0.75"
+        stroke-linecap="round"
+        opacity="0.35"
+      />
+    </svg>

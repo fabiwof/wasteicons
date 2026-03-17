@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const MineralExtractionIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <path fill="currentColor" d="M6 4h12l-2 17H8z"/><rect width="12" height="2" x="6" y="3" fill="currentColor" rx=".5"/><rect width="6" height="1" x="9" y="8.5" fill="#fff" opacity=".3" rx=".5"/><rect width="4" height="1" x="10" y="13.5" fill="#fff" opacity=".3" rx=".5"/><path fill="#fff" d="M11.5 4h1v17h-1z" opacity=".1"/>
+    </svg>
+  )
+);
+
+MineralExtractionIcon.displayName = "MineralExtractionIcon";
+
+export default MineralExtractionIcon;

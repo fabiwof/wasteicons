@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const TrackBallastIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <path stroke="currentColor" strokeLinecap="round" strokeWidth="1.5" d="M4 8v12M20 8v12"/><path stroke="currentColor" strokeLinecap="round" strokeWidth="1.5" d="M4 10h16M4 14h16M4 18h16"/><circle cx="8" cy="5" r="1.5" stroke="currentColor" opacity=".4"/><circle cx="14" cy="4" r="1.5" stroke="currentColor" opacity=".4"/><circle cx="11" cy="6" r="1" stroke="currentColor" strokeWidth=".75" opacity=".3"/>
+    </svg>
+  )
+);
+
+TrackBallastIcon.displayName = "TrackBallastIcon";
+
+export default TrackBallastIcon;

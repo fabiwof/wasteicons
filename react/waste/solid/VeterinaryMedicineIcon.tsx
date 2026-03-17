@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const VeterinaryMedicineIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <ellipse cx="8" cy="7" fill="currentColor" opacity=".4" rx="2" ry="2.5"/><ellipse cx="16" cy="7" fill="currentColor" opacity=".4" rx="2" ry="2.5"/><ellipse cx="5" cy="13" fill="currentColor" opacity=".4" rx="1.5" ry="2"/><ellipse cx="19" cy="13" fill="currentColor" opacity=".4" rx="1.5" ry="2"/><path fill="currentColor" d="M8 17c1 3 2.5 4 4 4s3-1 4-4c-1.5-1.5-3-2-4-2s-2.5.5-4 2" opacity=".5"/>
+    </svg>
+  )
+);
+
+VeterinaryMedicineIcon.displayName = "VeterinaryMedicineIcon";
+
+export default VeterinaryMedicineIcon;

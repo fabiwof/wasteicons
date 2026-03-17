@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const WoodPreservativesIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <rect width="7" height="16" x="3" y="4" fill="currentColor" rx=".5"/><rect width="3" height="1" x="4.5" y="6.5" fill="#fff" opacity=".2" rx=".5"/><rect width="3" height="1" x="4.5" y="10.5" fill="#fff" opacity=".2" rx=".5"/><rect width="3" height="1" x="4.5" y="14.5" fill="#fff" opacity=".2" rx=".5"/><path fill="currentColor" d="M16 4c3 0 5 2 5 5 0 5-5 8-5 8s-5-3-5-8c0-3 2-5 5-5"/><rect width="1" height="3" x="15.5" y="9" fill="#fff" opacity=".3" rx=".5"/><rect width="4" height="1" x="14" y="10" fill="#fff" opacity=".3" rx=".5"/>
+    </svg>
+  )
+);
+
+WoodPreservativesIcon.displayName = "WoodPreservativesIcon";
+
+export default WoodPreservativesIcon;

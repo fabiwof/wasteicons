@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+      <ellipse cx="18" cy="12" rx="3" ry="7" fill="currentColor" opacity="0.3" />
+      <ellipse cx="18" cy="12" rx="1.2" ry="3" fill="white" opacity="0.3" />
+      <path d="M18 5H6c-2 0-3 3-3 7s1 7 3 7h12" fill="currentColor" opacity="0.2" />
+      <rect x="5" y="8.5" width="11" height="1" fill="currentColor" opacity="0.1" />
+      <rect x="5" y="11.5" width="11" height="1" fill="currentColor" opacity="0.1" />
+      <rect x="5" y="14.5" width="11" height="1" fill="currentColor" opacity="0.1" />
+    </svg>

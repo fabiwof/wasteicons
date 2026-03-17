@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const HazardousElectronicsIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <rect width="13" height="15" x="3" y="5" fill="currentColor" opacity=".2" rx="1"/><rect width="7" height="1" x="6" y="8.5" fill="currentColor" opacity=".3" rx=".5"/><rect width="5" height="1" x="6" y="12.5" fill="currentColor" opacity=".3" rx=".5"/><circle cx="13" cy="13" r="1.5" fill="currentColor" opacity=".3"/><rect width="3" height="1" x="6" y="16.5" fill="currentColor" opacity=".2" rx=".5"/><g><path fill="currentColor" d="m19 10 2.5 4.5h-5z" opacity=".6"/><circle cx="19" cy="14" r=".5" fill="#fff"/><rect width=".8" height="1.5" x="18.6" y="11.8" fill="#fff" rx=".4"/></g>
+    </svg>
+  )
+);
+
+HazardousElectronicsIcon.displayName = "HazardousElectronicsIcon";
+
+export default HazardousElectronicsIcon;

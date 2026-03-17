@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M9 3h6v6l4 10a1 1 0 01-1 1H6a1 1 0 01-1-1l4-10V3z"
+        fill="currentColor"
+      />
+      <path d="M9 2h6v2H9V2z" fill="currentColor" />
+      <path d="M7 15h10" fill="none" stroke="white" stroke-width="0.75" opacity="0.3" />
+      <rect x="10" y="4" width="4" height="4" fill="white" opacity="0.2" />
+    </svg>

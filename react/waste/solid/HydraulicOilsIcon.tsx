@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const HydraulicOilsIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <rect width="8" height="10" x="4" y="10" fill="currentColor" rx=".5"/><rect width="2" height="6" x="7" y="4" fill="currentColor" rx=".5"/><rect width="4" height="1.5" x="6" y="3.5" fill="currentColor" rx=".5"/><rect width="8" height="1.5" x="12" y="14.5" fill="currentColor" rx=".5"/><rect width="1.5" height="6" x="16.5" y="12" fill="currentColor" rx=".5"/>
+    </svg>
+  )
+);
+
+HydraulicOilsIcon.displayName = "HydraulicOilsIcon";
+
+export default HydraulicOilsIcon;

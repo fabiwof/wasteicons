@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const DairyProcessingIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <path fill="currentColor" d="M8 3h8v4l2 2v11a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9l2-2z"/><rect width="8" height="2" x="8" y="2" fill="currentColor" rx=".5"/><rect width="10" height="1" x="7" y="13.5" fill="#fff" opacity=".2" rx=".5"/>
+    </svg>
+  )
+);
+
+DairyProcessingIcon.displayName = "DairyProcessingIcon";
+
+export default DairyProcessingIcon;

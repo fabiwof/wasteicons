@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const SurfaceTreatmentIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <rect width="16" height="11" x="4" y="10" fill="currentColor" rx="1"/><path fill="#fff" d="M4 15h16v1H4z" opacity=".2"/><rect width="4" height="6" x="10" y="4" fill="currentColor" rx=".5"/><path fill="currentColor" d="M8 7h8v3H8z" opacity=".2"/><rect width="10" height="1" x="7" y="17.5" fill="#fff" opacity=".2" rx=".5"/>
+    </svg>
+  )
+);
+
+SurfaceTreatmentIcon.displayName = "SurfaceTreatmentIcon";
+
+export default SurfaceTreatmentIcon;

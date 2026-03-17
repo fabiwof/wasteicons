@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const ThermalProcessesIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <rect width="16" height="15" x="4" y="6" fill="currentColor" rx="1"/><rect width="16" height="2" x="4" y="5" fill="currentColor" rx=".5"/><path fill="#fff" d="M12 18c-2 0-3-2-3-4 0-1.5 1.5-3 3-5 1.5 2 3 3.5 3 5 0 2-1 4-3 4" opacity=".3"/>
+    </svg>
+  )
+);
+
+ThermalProcessesIcon.displayName = "ThermalProcessesIcon";
+
+export default ThermalProcessesIcon;

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+      <path d="M2 20h13v-5H2V20z" fill="currentColor" opacity="0.25" />
+      <path d="M2 15l3-5h7l3 5H2z" fill="currentColor" opacity="0.2" />
+      <rect x="5" y="15" width="1" height="5" fill="currentColor" opacity="0.1" />
+      <rect x="10" y="15" width="1" height="5" fill="currentColor" opacity="0.1" />
+      <g>
+      <path d="M19 10l2.5 4.5H16.5L19 10z" fill="currentColor" opacity="0.6" />
+      <circle cx="19" cy="14" r="0.5" fill="white" />
+      <rect x="18.6" y="11.8" width="0.8" height="1.5" rx="0.4" fill="white" />
+    </g>
+    </svg>

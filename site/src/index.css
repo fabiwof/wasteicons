@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Variable.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@theme {
+  --font-sans: "Satoshi", system-ui, -apple-system, sans-serif;
+  --color-rust-50: #fdf5f3;
+  --color-rust-100: #fbe8e3;
+  --color-rust-200: #f5cec2;
+  --color-rust-300: #ecab96;
+  --color-rust-400: #df7f5e;
+  --color-rust-500: #c9572e;
+  --color-rust-600: #a63c1e;
+  --color-rust-700: #8b3118;
+  --color-rust-800: #732d1a;
+  --color-rust-900: #602a1b;
+  --color-rust-950: #34120b;
+}

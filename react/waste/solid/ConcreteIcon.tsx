@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const ConcreteIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <path fill="currentColor" d="m4 8 8-4 8 4v10H4z" opacity=".2"/><path fill="currentColor" d="m4 8 8 4 8-4" opacity=".15"/><path fill="currentColor" d="M11.5 12h1v6h-1z" opacity=".2"/><rect width="4" height="1" x="7" y="13.5" fill="currentColor" opacity=".15" rx=".5"/><rect width="4" height="1" x="13" y="15.5" fill="currentColor" opacity=".15" rx=".5"/>
+    </svg>
+  )
+);
+
+ConcreteIcon.displayName = "ConcreteIcon";
+
+export default ConcreteIcon;

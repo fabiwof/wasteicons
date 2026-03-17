@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const ConcreteBricksTilesIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <rect width="18" height="5" x="3" y="4" fill="currentColor" opacity=".3" rx=".5"/><rect width="18" height="5" x="3" y="10" fill="currentColor" opacity=".25" rx=".5"/><rect width="18" height="5" x="3" y="16" fill="currentColor" opacity=".2" rx=".5"/><path fill="#fff" d="M11.5 4h1v5h-1z" opacity=".4"/><path fill="#fff" d="M7.5 10h1v5h-1z" opacity=".4"/><path fill="#fff" d="M15.5 10h1v5h-1z" opacity=".4"/><path fill="#fff" d="M11.5 16h1v5h-1z" opacity=".4"/>
+    </svg>
+  )
+);
+
+ConcreteBricksTilesIcon.displayName = "ConcreteBricksTilesIcon";
+
+export default ConcreteBricksTilesIcon;

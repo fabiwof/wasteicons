@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const HotDipGalvanisingIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <rect width="18" height="10" x="3" y="10" fill="currentColor" rx="1"/><path fill="#fff" d="M3 14.5h18v1H3z" opacity=".2"/><rect width="1" height="4.5" x="7.5" y="5.5" fill="currentColor" rx=".5"/><rect width="1" height="4.5" x="15.5" y="5.5" fill="currentColor" rx=".5"/><rect width="8" height="1" x="8" y="5.5" fill="currentColor" rx=".5"/><rect width="1" height="4" x="11.5" y="6" fill="currentColor" opacity=".7" rx=".5"/>
+    </svg>
+  )
+);
+
+HotDipGalvanisingIcon.displayName = "HotDipGalvanisingIcon";
+
+export default HotDipGalvanisingIcon;

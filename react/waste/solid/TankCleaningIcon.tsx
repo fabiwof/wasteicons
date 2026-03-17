@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const TankCleaningIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <ellipse cx="12" cy="6" fill="currentColor" opacity=".3" rx="7" ry="2.5"/><path fill="currentColor" d="M5 6v12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V6" opacity=".2"/><ellipse cx="12" cy="12" fill="currentColor" opacity=".1" rx="7" ry="2.5"/><rect width="1" height="2.5" x="11.5" y="1" fill="currentColor" rx=".5"/><rect width="4" height="1" x="10" y=".5" fill="currentColor" opacity=".4" rx=".5"/>
+    </svg>
+  )
+);
+
+TankCleaningIcon.displayName = "TankCleaningIcon";
+
+export default TankCleaningIcon;

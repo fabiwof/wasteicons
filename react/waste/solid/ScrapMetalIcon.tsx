@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const ScrapMetalIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <ellipse cx="12" cy="5" fill="currentColor" opacity=".3" rx="5" ry="2"/><path fill="currentColor" d="M7 5v3l-1 3 1 3v3c0 1.1 2.2 2 5 2s5-.9 5-2v-3l1-3-1-3V5" opacity=".2"/><ellipse cx="12" cy="8" fill="currentColor" opacity=".1" rx="5" ry="1.5"/><ellipse cx="12" cy="14" fill="currentColor" opacity=".1" rx="6" ry="1.5"/>
+    </svg>
+  )
+);
+
+ScrapMetalIcon.displayName = "ScrapMetalIcon";
+
+export default ScrapMetalIcon;

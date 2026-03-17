@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const FluorescentTubesIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <rect width="20" height="4" x="2" y="10" fill="currentColor" opacity=".25" rx="2"/><rect width="2" height="2" x="5" y="8" fill="currentColor" opacity=".3" rx=".5"/><rect width="2" height="2" x="17" y="8" fill="currentColor" opacity=".3" rx=".5"/><rect width="1" height="3" x="7.5" y="5" fill="currentColor" opacity=".2" rx=".5" transform="rotate(-15 8 6.5)"/><rect width="1" height="3" x="15.5" y="5" fill="currentColor" opacity=".2" rx=".5" transform="rotate(15 16 6.5)"/><rect width="1" height="2.5" x="9.5" y="5.5" fill="currentColor" opacity=".15" rx=".5" transform="rotate(-10 10 6.5)"/><rect width="1" height="2.5" x="13.5" y="5.5" fill="currentColor" opacity=".15" rx=".5" transform="rotate(10 14 6.5)"/>
+    </svg>
+  )
+);
+
+FluorescentTubesIcon.displayName = "FluorescentTubesIcon";
+
+export default FluorescentTubesIcon;

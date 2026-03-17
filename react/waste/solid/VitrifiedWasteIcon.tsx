@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const VitrifiedWasteIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <path fill="currentColor" d="m6 3 6 9-6 9h12l-6-9 6-9z" opacity=".2"/><rect width="12" height="1.5" x="6" y="2.5" fill="currentColor" rx=".75"/><rect width="12" height="1.5" x="6" y="20.5" fill="currentColor" rx=".75"/><path fill="currentColor" d="m9 8 3 4 3-4" opacity=".15"/><path fill="currentColor" d="m9 16 3-4 3 4" opacity=".15"/>
+    </svg>
+  )
+);
+
+VitrifiedWasteIcon.displayName = "VitrifiedWasteIcon";
+
+export default VitrifiedWasteIcon;

@@ -1,0 +1,19 @@
+import { forwardRef } from "react";
+
+const ConstructionPlasticIcon = forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      ref={ref}
+      {...props}
+    >
+      <rect width="18" height="8" x="3" y="8" fill="currentColor" opacity=".2" rx=".5"/><ellipse cx="3" cy="12" fill="currentColor" opacity=".3" rx="1" ry="4"/><ellipse cx="21" cy="12" fill="currentColor" opacity=".3" rx="1" ry="4"/><path fill="currentColor" d="M8 8h1v8H8z" opacity=".1"/><path fill="currentColor" d="M14 8h1v8h-1z" opacity=".1"/><path fill="currentColor" d="M3 11.5h18v1H3z" opacity=".1"/>
+    </svg>
+  )
+);
+
+ConstructionPlasticIcon.displayName = "ConstructionPlasticIcon";
+
+export default ConstructionPlasticIcon;
