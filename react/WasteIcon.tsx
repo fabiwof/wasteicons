@@ -1,5 +1,6 @@
-import { forwardRef, lazy, useMemo } from "react";
+import { forwardRef, useMemo } from "react";
 import type { ComponentType } from "react";
+import * as OutlineIcons from "./waste/outline";
 
 /**
  * WasteIcon — high-level wrapper that accepts an AVV code and renders
@@ -209,48 +210,26 @@ const codeMap: Record<string, string> = {
   "200307": "BulkyWasteIcon",
 };
 
-// ─── Dynamic imports ────────────────────────────────────────────────────────
-
-// Build a map of lazy-loaded components so we don't import everything upfront.
-// For static / SSR usage, the build step ensures these are tree-shakeable.
+// ─── Component lookup ───────────────────────────────────────────────────────
 
 type SvgComponent = ComponentType<React.SVGProps<SVGSVGElement>>;
 
-const componentCache = new Map<string, SvgComponent>();
+// Build name → component map from barrel import
+const allIcons = OutlineIcons as Record<string, SvgComponent>;
 
-function getIconComponent(
-  code: string
-): SvgComponent | null {
+function getIconComponent(code: string): SvgComponent | null {
   // 1. Exact code match
-  if (codeMap[code]) {
-    return resolveComponent(code);
-  }
+  const exactName = codeMap[code];
+  if (exactName && allIcons[exactName]) return allIcons[exactName];
 
   // 2. Group match (first 4 digits)
-  const group = code.slice(0, 4);
-  if (codeMap[group]) {
-    return resolveComponent(group);
-  }
+  const groupName = codeMap[code.slice(0, 4)];
+  if (groupName && allIcons[groupName]) return allIcons[groupName];
 
   // 3. Chapter match (first 2 digits)
-  const chapter = code.slice(0, 2);
-  if (codeMap[chapter]) {
-    return resolveComponent(chapter);
-  }
+  const chapterName = codeMap[code.slice(0, 2)];
+  if (chapterName && allIcons[chapterName]) return allIcons[chapterName];
 
-  return null;
-}
-
-function resolveComponent(key: string): SvgComponent | null {
-  const name = codeMap[key];
-  if (!name) return null;
-
-  if (componentCache.has(name)) {
-    return componentCache.get(name)!;
-  }
-
-  // For now, return null — in a full build, this would use dynamic imports
-  // or a pre-built lookup. The static barrel exports are the recommended path.
   return null;
 }
 
@@ -295,7 +274,7 @@ export interface WasteIconProps extends React.SVGProps<SVGSVGElement> {
  * Renders a waste icon for the given AVV code.
  *
  * For optimal tree-shaking, prefer importing individual icons directly:
- *   import { ConcreteIcon } from "@schaffsch/waste-icons/react/waste/outline";
+ *   import { ConcreteIcon } from "@schaffsch/waste-icons/waste/outline";
  *
  * This wrapper is convenient when the code is dynamic (e.g. from a database).
  */

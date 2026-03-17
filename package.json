@@ -5,29 +5,33 @@
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
-  "main": "./dist/react/index.js",
-  "module": "./dist/react/index.js",
-  "types": "./dist/react/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    "./react/waste/outline": {
-      "types": "./dist/react/waste/outline/index.d.ts",
-      "import": "./dist/react/waste/outline/index.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     },
-    "./react/waste/solid": {
-      "types": "./dist/react/waste/solid/index.d.ts",
-      "import": "./dist/react/waste/solid/index.js"
+    "./waste/outline": {
+      "types": "./dist/waste/outline/index.d.ts",
+      "default": "./dist/waste/outline/index.js"
     },
-    "./react/container/outline": {
-      "types": "./dist/react/container/outline/index.d.ts",
-      "import": "./dist/react/container/outline/index.js"
+    "./waste/solid": {
+      "types": "./dist/waste/solid/index.d.ts",
+      "default": "./dist/waste/solid/index.js"
     },
-    "./react": {
-      "types": "./dist/react/index.d.ts",
-      "import": "./dist/react/index.js"
+    "./container/outline": {
+      "types": "./dist/container/outline/index.d.ts",
+      "default": "./dist/container/outline/index.js"
     },
-    "./react/WasteIcon": {
-      "types": "./dist/react/WasteIcon.d.ts",
-      "import": "./dist/react/WasteIcon.js"
+    "./WasteIcon": {
+      "types": "./dist/WasteIcon.d.ts",
+      "default": "./dist/WasteIcon.js"
+    },
+    "./ContainerIcon": {
+      "types": "./dist/ContainerIcon.d.ts",
+      "default": "./dist/ContainerIcon.js"
     }
   },
   "files": [

@@ -7,6 +7,7 @@ export default defineConfig({
     "react/waste/solid/index.ts",
     "react/container/outline/index.ts",
     "react/WasteIcon.tsx",
+    "react/ContainerIcon.tsx",
   ],
   format: ["esm"],
   dts: true,
