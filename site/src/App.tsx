@@ -70,13 +70,35 @@ export default function App() {
       </main>
 
       <footer className="border-t border-slate-100 py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <a
-          href="https://schaffsch.de"
-          className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-slate-600 transition-colors"
-        >
-          {t("builtBy", language)}
-          <img src="/schaffsch.svg" alt="SCHAFFSCH" className="h-3.5 opacity-40 hover:opacity-70 transition-opacity" />
-        </a>
+        <div className="flex flex-wrap items-center gap-x-1.5 gap-y-2 text-sm text-slate-400">
+          <a
+            href="https://www.schaffsch.de"
+            target="_blank"
+            rel="noopener"
+            className="inline-flex items-center gap-1.5 hover:text-slate-600 transition-colors"
+          >
+            {t("builtBy", language)}
+            <img src="/schaffsch.svg" alt="SCHAFFSCH" className="h-3.5 opacity-40 hover:opacity-70 transition-opacity" />
+          </a>
+          <span aria-hidden="true">&middot;</span>
+          <a
+            href="https://www.schaffsch.de/impressum"
+            target="_blank"
+            rel="noopener"
+            className="hover:text-slate-600 transition-colors"
+          >
+            {t("legalNotice", language)}
+          </a>
+          <span aria-hidden="true">&middot;</span>
+          <a
+            href="https://www.schaffsch.de/datenschutz"
+            target="_blank"
+            rel="noopener"
+            className="hover:text-slate-600 transition-colors"
+          >
+            {t("privacyPolicy", language)}
+          </a>
+        </div>
       </footer>
     </div>
   );

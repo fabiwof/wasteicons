@@ -16,7 +16,9 @@ const strings = {
   },
   license: { de: "MIT-Lizenz", en: "MIT License" },
   docs: { de: "Dokumentation", en: "Documentation" },
-  builtBy: { de: "Gebaut von", en: "Built by" },
+  builtBy: { de: "Ein Projekt von", en: "A project by" },
+  legalNotice: { de: "Impressum", en: "Legal Notice" },
+  privacyPolicy: { de: "Datenschutz", en: "Privacy Policy" },
   nIcons: { de: "Icons", en: "Icons" },
 } as const;
 
