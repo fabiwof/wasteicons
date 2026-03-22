@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { IconEntry } from "../data/icons";
 import { copyToClipboard } from "../lib/clipboard";
@@ -16,11 +16,24 @@ function formatAvvCode(code: string): string {
   return code;
 }
 
+/** Extract viewBox and inner content from an SVG string so we can render
+ *  a proper <svg> React element. This avoids the iOS Safari bug where
+ *  innerHTML on a <div> doesn't apply the SVG namespace. */
+function parseSvg(raw: string): { viewBox: string; inner: string } {
+  const viewBoxMatch = raw.match(/viewBox="([^"]+)"/);
+  const innerMatch = raw.match(/<svg[^>]*>([\s\S]*)<\/svg>/);
+  return {
+    viewBox: viewBoxMatch?.[1] ?? "0 0 24 24",
+    inner: innerMatch?.[1] ?? "",
+  };
+}
+
 const MAX_BADGES = 3;
 
 export default function IconCard({ icon }: IconCardProps) {
   const { language } = useLanguage();
   const [copied, setCopied] = useState<"svg" | "jsx" | null>(null);
+  const { viewBox, inner } = useMemo(() => parseSvg(icon.svg), [icon.svg]);
 
   const handleCopy = useCallback(
     async (e: React.MouseEvent, type: "svg" | "jsx") => {
@@ -42,11 +55,14 @@ export default function IconCard({ icon }: IconCardProps) {
   return (
     <div className="group relative flex flex-col items-center">
       <div className="relative w-full aspect-square rounded-xl border border-slate-200 flex items-center justify-center bg-white hover:border-slate-300 hover:shadow-sm transition-all cursor-pointer">
-        <div
-          className={`flex items-center justify-center text-slate-700 group-hover:text-slate-900 transition-colors ${
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox={viewBox}
+          className={`text-slate-700 group-hover:text-slate-900 transition-colors ${
             icon.category === "container" ? "w-8 h-6" : "w-6 h-6"
           }`}
-          dangerouslySetInnerHTML={{ __html: icon.svg }}
+          dangerouslySetInnerHTML={{ __html: inner }}
         />
 
         {/* Hover overlay — two clickable halves like heroicons */}
@@ -78,11 +94,14 @@ export default function IconCard({ icon }: IconCardProps) {
               transition={{ type: "spring", stiffness: 400, damping: 25 }}
               className="absolute inset-0 flex flex-col items-center justify-center gap-2 rounded-xl bg-white border border-slate-200"
             >
-              <div
-                className={`flex items-center justify-center text-slate-700 ${
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox={viewBox}
+                className={`text-slate-700 ${
                   icon.category === "container" ? "w-8 h-6" : "w-6 h-6"
                 }`}
-                dangerouslySetInnerHTML={{ __html: icon.svg }}
+                dangerouslySetInnerHTML={{ __html: inner }}
               />
               <span className="text-xs font-semibold text-rust-500">
                 {t("copied", language)}
